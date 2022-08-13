@@ -3,10 +3,8 @@ package Client_Side.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,7 +20,7 @@ public class ClientLoginFormController {
     public String name;
     public AnchorPane mainRoot;
 
-    public void continueBtnOnAction(ActionEvent actionEvent) throws IOException {
+    public void loginBtnOnAction(ActionEvent actionEvent) throws IOException {
         userName = txtName.getText().trim();
         boolean flag = false;
         if (users.isEmpty()) {
