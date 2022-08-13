@@ -40,10 +40,10 @@ public class MessageFormController extends Thread {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        txtMessage.requestFocus();
+        txtArea.setEditable(false);
     }
 
-    public void txtMsgOnAction(ActionEvent actionEvent) {
+    public void messageSend(){
         String msg = txtMessage.getText().trim();
         writer.println(ClientLoginFormController.userName + ": " + msg);
         txtArea.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
@@ -53,11 +53,13 @@ public class MessageFormController extends Thread {
         }
     }
 
+    public void txtMsgOnAction(ActionEvent actionEvent) {
+        messageSend();
+    }
+
+
     public void sendBtnOnAction(MouseEvent mouseEvent) {
-        String msg = txtMessage.getText().trim();
-        writer.println(ClientLoginFormController.userName + ": " + msg);
-        txtArea.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
-        txtMessage.setText("");
+        messageSend();
     }
 
     @Override

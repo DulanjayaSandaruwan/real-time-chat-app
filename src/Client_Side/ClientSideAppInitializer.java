@@ -23,7 +23,7 @@ public class ClientSideAppInitializer extends Application {
         Parent root = FXMLLoader.load(this.getClass().getResource("view/ClientLoginForm.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-//        primaryStage.getIcons().add(new Image("./assets/images/1logo.png"));
+        //primaryStage.getIcons().add(new Image("./assets/images/1logo.png"));
         primaryStage.setTitle("Login Form");
         primaryStage.centerOnScreen();
         primaryStage.show();
