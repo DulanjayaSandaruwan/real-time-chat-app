@@ -69,7 +69,7 @@
                 </ImageView>
             </children>
         </AnchorPane>
-        <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="289.0" layoutY="542.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="289.0" layoutY="542.0" onMouseClicked="#sendBtnOnAction" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../assets/send.png" />
             </image>

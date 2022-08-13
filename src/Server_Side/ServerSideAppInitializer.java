@@ -30,7 +30,6 @@ public class ServerSideAppInitializer {
                 //Starting the Thread
                 threadArrayList.add(serverThread);
                 serverThread.start();
-
                 //get all the list of currently running thread
             }
         } catch (IOException e) {

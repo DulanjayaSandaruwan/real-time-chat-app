@@ -5,7 +5,7 @@ import javafx.geometry.NodeOrientation;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.input.MouseEvent;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,6 +40,7 @@ public class MessageFormController extends Thread {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        txtMessage.requestFocus();
     }
 
     public void txtMsgOnAction(ActionEvent actionEvent) {
@@ -50,6 +51,13 @@ public class MessageFormController extends Thread {
         if (msg.equalsIgnoreCase("Bye") || (msg.equalsIgnoreCase("logout"))) {
             System.exit(0);
         }
+    }
+
+    public void sendBtnOnAction(MouseEvent mouseEvent) {
+        String msg = txtMessage.getText().trim();
+        writer.println(ClientLoginFormController.userName + ": " + msg);
+        txtArea.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
+        txtMessage.setText("");
     }
 
     @Override
