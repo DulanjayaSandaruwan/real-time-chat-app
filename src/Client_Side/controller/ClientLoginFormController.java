@@ -37,11 +37,9 @@ public class ClientLoginFormController {
         }
 
         if (flag) {
-            Parent parent;
             this.mainRoot.getChildren().clear();
             this.mainRoot.getChildren().add(
                     FXMLLoader.load(this.getClass().getResource("../view/MessageForm.fxml")));
-
         }
     }
 }
