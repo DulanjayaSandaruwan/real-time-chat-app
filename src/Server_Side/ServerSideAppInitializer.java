@@ -15,7 +15,6 @@ public class ServerSideAppInitializer {
     private static ServerSocket serverSocket;
 
     public static void main(String[] args) {
-
         //add all the clients Threads to list
         ArrayList<ServerThread> threadArrayList = new ArrayList<>();
 
