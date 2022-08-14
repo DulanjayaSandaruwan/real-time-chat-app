@@ -6,6 +6,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -26,6 +28,7 @@ public class MessageFormController extends Thread {
     public BufferedReader reader;
     public PrintWriter writer;
     public Socket socket;
+    public VBox vbox_message;
 
     public void initialize() {
         System.out.println("Initialized method" + ClientLoginFormController.userName);
@@ -83,6 +86,7 @@ public class MessageFormController extends Thread {
                 }
 
                 txtArea.appendText(msg + "\n\n");
+
             }
 
             reader.close();
