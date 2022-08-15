@@ -22,7 +22,7 @@ public class EmojiFormController {
     public ObservableList<Label> emojiList = FXCollections.observableArrayList();
 
     public void initialize() {
-        String style = "-fx-font-size: 50px;-fx-text-fill: black;-fx-padding: 0 0 0 10;";
+        String style = "-fx-font-size: 50px;-fx-text-fill: #30a8dd;-fx-padding: 0 0 0 10;";
         emojiVBox.setSpacing(20);
         emojiOne.setText(new String(Character.toChars(0x1F606)));
         emojiTwo.setText(new String(Character.toChars(0x1F601)));
