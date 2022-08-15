@@ -2,16 +2,13 @@ package Client_Side.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-/**
- * @author : D.D.Sandaruwan <dulanjayasandaruwan1998@gmail.com>
- * @Since : 12/08/2022
- **/
 public class ClientLoginFormController {
     public static String userName;
     public static ArrayList<String> users = new ArrayList<>();

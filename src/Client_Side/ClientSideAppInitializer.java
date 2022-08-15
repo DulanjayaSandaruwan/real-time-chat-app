@@ -8,10 +8,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- * @author : D.D.Sandaruwan <dulanjayasandaruwan1998@gmail.com>
- * @Since : 12/08/2022
- **/
 public class ClientSideAppInitializer extends Application {
 
     public static void main(String[] args) {

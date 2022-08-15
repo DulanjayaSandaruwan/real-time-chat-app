@@ -5,10 +5,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 
-/**
- * @author : D.D.Sandaruwan <dulanjayasandaruwan1998@gmail.com>
- * @Since : 12/08/2022
- **/
 public class ServerSideAppInitializer {
 
     private static Socket socket;
@@ -33,13 +29,6 @@ public class ServerSideAppInitializer {
             }
         } catch (IOException e) {
             System.out.println("Error occurred in main: " + e.getStackTrace());
-        } finally {
-            try {
-                socket.close();
-                serverSocket.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
     }
 }
