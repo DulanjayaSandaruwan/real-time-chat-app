@@ -138,62 +138,61 @@ public class MessageFormController extends Thread {
                 Thread.sleep(500);
                 Label label = new Label();
                 Platform.runLater(() -> {
-                            String emojiStyle = "-fx-font-size: 25px";
-                            if (msg.getImage() != null) {
-                                Image image = new Image(msg.getImage());
-                                ImageView imageView = new ImageView();
-                                imageView.setImage(image);
-                                imageView.setFitWidth(100);
-                                imageView.setFitHeight(100);
+                    String emojiStyle = "-fx-font-size: 25px";
+                    if (msg.getImage() != null) {
+                        Image image = new Image(msg.getImage());
+                        ImageView imageView = new ImageView();
+                        imageView.setImage(image);
+                        imageView.setFitWidth(100);
+                        imageView.setFitHeight(100);
 
-                                if (!msg.getMessage().isEmpty()) {
-                                    if (msg.getEmoji() != null) {
-                                        label.setText(msg.getName() + " : " + msg.getMessage() + " " + msg.getEmoji() + "\n\n");
-                                    } else {
-                                        label.setText(msg.getName() + " : " + msg.getMessage() + "\n\n");
-                                    }
-                                    label.setGraphic(imageView);
-                                    label.setContentDisplay(ContentDisplay.BOTTOM);
-                                } else {
-                                    if (msg.getEmoji() != null) {
-                                        Label l = new Label(msg.getEmoji());
-                                        l.setStyle(emojiStyle);
-                                        label.setText(msg.getName() + " : " + "\n\n");
-                                        label.setGraphic(l);
-                                    } else {
-                                        label.setText(msg.getName() + " : " + "\n\n");
-                                    }
-                                    label.setGraphic(imageView);
-                                    label.setContentDisplay(ContentDisplay.BOTTOM);
-                                }
-                            } else if (msg.getImage() == null) {
-                                if (!msg.getMessage().isEmpty()) {
-                                    if (msg.getEmoji() != null) {
-                                        Label l = new Label(msg.getEmoji());
-                                        l.setStyle(emojiStyle);
-                                        label.setText(msg.getName() + " : " + msg.getMessage() + " " + "\n\n");
-                                        label.setGraphic(l);
-                                        label.setContentDisplay(ContentDisplay.BOTTOM);
-                                    } else {
-                                        label.setText(msg.getName() + " : " + msg.getMessage() + "\n\n");
-                                    }
-                                } else {
-                                    Label l = new Label(msg.getEmoji());
-                                    l.setStyle(emojiStyle);
-                                    label.setText(msg.getName() + " : " + "\n\n");
-                                    label.setGraphic(l);
-                                    label.setContentDisplay(ContentDisplay.BOTTOM);
-                                }
+                        if (!msg.getMessage().isEmpty()) {
+                            if (msg.getEmoji() != null) {
+                                label.setText(msg.getName() + " : " + msg.getMessage() + " " + msg.getEmoji() + "\n\n");
+                            } else {
+                                label.setText(msg.getName() + " : " + msg.getMessage() + "\n\n");
                             }
-                            label.setStyle("-fx-background-color:  #4CDF79;-fx-text-fill: white;-fx-background-radius: 10 10 10 10;-fx-border-radius: 10 10 10 10;-fx-padding: 0 10 0 10;-fx-font-size: 13px");
-                            observableList.addAll(label);
-                            messageVBox.getChildren().clear();
-                            messageVBox.setSpacing(10);
-                            for (int i = 0; i < observableList.size(); i++) {
-                                messageVBox.getChildren().addAll(observableList.get(i));
+                            label.setGraphic(imageView);
+                            label.setContentDisplay(ContentDisplay.BOTTOM);
+                        } else {
+                            if (msg.getEmoji() != null) {
+                                Label l = new Label(msg.getEmoji());
+                                l.setStyle(emojiStyle);
+                                label.setText(msg.getName() + " : " + "\n\n");
+                                label.setGraphic(l);
+                            } else {
+                                label.setText(msg.getName() + " : " + "\n\n");
                             }
+                            label.setGraphic(imageView);
+                            label.setContentDisplay(ContentDisplay.BOTTOM);
                         }
-                );
+                    } else if (msg.getImage() == null) {
+                        if (!msg.getMessage().isEmpty()) {
+                            if (msg.getEmoji() != null) {
+                                Label l = new Label(msg.getEmoji());
+                                l.setStyle(emojiStyle);
+                                label.setText(msg.getName() + " : " + msg.getMessage() + " " + "\n\n");
+                                label.setGraphic(l);
+                                label.setContentDisplay(ContentDisplay.BOTTOM);
+                            } else {
+                                label.setText(msg.getName() + " : " + msg.getMessage() + "\n\n");
+                            }
+                        } else {
+                            Label l = new Label(msg.getEmoji());
+                            l.setStyle(emojiStyle);
+                            label.setText(msg.getName() + " : " + "\n\n");
+                            label.setGraphic(l);
+                            label.setContentDisplay(ContentDisplay.BOTTOM);
+                        }
+                    }
+                    label.setStyle("-fx-background-color: #30a8dd;-fx-text-fill: white;-fx-background-radius: 10 10 10 10;-fx-border-radius: 10 10 10 10;-fx-padding: 0 10 0 10;-fx-font-size: 13px");
+                    observableList.addAll(label);
+                    messageVBox.getChildren().clear();
+                    messageVBox.setSpacing(10);
+                    for (int i = 0; i < observableList.size(); i++) {
+                        messageVBox.getChildren().addAll(observableList.get(i));
+                    }
+                });
             }
 
         } catch (IOException | ClassNotFoundException | InterruptedException e) {

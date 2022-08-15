@@ -11,7 +11,7 @@ public class Message implements Serializable {
     public Message() {
     }
 
-    public Message(String name, String message,String emoji, String image) {
+    public Message(String name, String message, String emoji, String image) {
         this.name = name;
         this.message = message;
         this.emoji = emoji;
@@ -52,11 +52,6 @@ public class Message implements Serializable {
 
     @Override
     public String toString() {
-        return "Message{" +
-                "name='" + name + '\'' +
-                ", message='" + message + '\'' +
-                ", emoji='" + emoji + '\'' +
-                ", image='" + image + '\'' +
-                '}';
+        return "Message{" + "name='" + name + '\'' + ", message='" + message + '\'' + ", emoji='" + emoji + '\'' + ", image='" + image + '\'' + '}';
     }
 }
