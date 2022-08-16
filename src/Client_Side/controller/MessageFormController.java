@@ -107,7 +107,7 @@ public class MessageFormController extends Thread {
         EmojiFormController.clickedEmoji = null;
         imageFilePath = null;
         txtMessage.setText("");
-        if (msg.equalsIgnoreCase("Bye") || (msg.equalsIgnoreCase("logout"))) {
+        if (msg.equalsIgnoreCase("logout")) {
             System.exit(0);
         }
     }
@@ -132,7 +132,7 @@ public class MessageFormController extends Thread {
                 System.out.println("Msg In Client Thread : " + msg);
                 if (msg.getName().equalsIgnoreCase(ClientLoginFormController.userName + ": ")) {
                     continue;
-                } else if (msg.getMessage().equalsIgnoreCase("bye")) {
+                } else if (msg.getMessage().equalsIgnoreCase("logout")) {
                     break;
                 }
                 Thread.sleep(500);
