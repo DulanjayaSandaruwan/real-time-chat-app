@@ -19,6 +19,15 @@ public class EmojiFormController {
     public Label emojiSix = new Label();
     public Label emojiSeven = new Label();
     public Label emojiEight = new Label();
+
+//    public Label emojiNine = new Label();
+//
+//    public Label emojiTen = new Label();
+//
+//    public Label emojiEleven = new Label();
+//
+//    public Label emojiTwelve = new Label();
+
     public ObservableList<Label> emojiList = FXCollections.observableArrayList();
 
     public void initialize() {
@@ -40,6 +49,14 @@ public class EmojiFormController {
         emojiList.add(emojiSix);
         emojiList.add(emojiSeven);
         emojiList.add(emojiEight);
+//        emojiNine.setText(new String(Character.toChars(0x1F970)));
+//        emojiTen.setText(new String(Character.toChars(0x1F609)));
+//        emojiEleven.setText(new String(Character.toChars(0x1F618)));
+//        emojiTwelve.setText(new String(Character.toChars(0x1F632)));
+//        emojiList.add(emojiNine);
+//        emojiList.add(emojiTen);
+//        emojiList.add(emojiEleven);
+//        emojiList.add(emojiTwelve);
         HBox hBox1 = new HBox(20);
         HBox hBox2 = new HBox(20);
 
