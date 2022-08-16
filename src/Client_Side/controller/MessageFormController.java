@@ -215,4 +215,8 @@ public class MessageFormController extends Thread {
         stage.setTitle("Emoji Form");
         stage.show();
     }
+
+    public void btnExitOnClick(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
 }
